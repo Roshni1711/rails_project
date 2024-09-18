@@ -121,6 +121,12 @@ ActiveAdmin.setup do |config|
   #
   # Default:
   config.logout_link_path = :destroy_admin_user_session_path
+  # == Devise Configuration
+  config.authentication_method = :authenticate_admin_user! # Ensures authentication before accessing ActiveAdmin
+  config.current_user_method = :current_admin_user # Defines the current user as an AdminUser
+
+
+  
 
   # This setting changes the http method used when rendering the
   # link. For example :get, :delete, :put, etc..

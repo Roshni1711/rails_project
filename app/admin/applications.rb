@@ -1,4 +1,6 @@
 ActiveAdmin.register Application do
+
+  before_action :authenticate_admin_user!
   # Permitting parameters for strong params to allow CRUD operations
   permit_params :domain, :adapter, :encoding, :database, :pool, :username, :password, :host, :enabled
 
